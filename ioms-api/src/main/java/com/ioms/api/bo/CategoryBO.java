@@ -1,4 +1,4 @@
-package com.ioms.api.category.dto;
+package com.ioms.api.bo;
 
 
 public class CategoryBO {

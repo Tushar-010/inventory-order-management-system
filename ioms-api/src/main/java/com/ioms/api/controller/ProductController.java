@@ -1,8 +1,8 @@
 package com.ioms.api.controller;
 
-import com.ioms.api.BOs.CommonResponseBO;
-import com.ioms.api.product.ProductService;
-import com.ioms.api.product.dto.CreateProductBO;
+import com.ioms.api.bo.CommonResponseBO;
+import com.ioms.api.bo.CreateProductBO;
+import com.ioms.api.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

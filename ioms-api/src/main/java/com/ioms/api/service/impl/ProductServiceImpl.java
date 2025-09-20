@@ -1,22 +1,22 @@
-package com.ioms.api.product;
+package com.ioms.api.service.impl;
 
-import com.ioms.api.BOs.CommonResponseBO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.ioms.api.category.Category;
-import com.ioms.api.category.CategoryRepository;
-import com.ioms.api.inventory.Inventory;
-import com.ioms.api.inventory.InventoryRepository;
-import com.ioms.api.product.dto.CreateProductBO;
-import com.ioms.api.product.dto.ProductResponseBO;
+import com.ioms.api.repo.InventoryRepository;
+import com.ioms.api.repo.ProductRepository;
+import com.ioms.api.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
+import com.ioms.api.bo.CommonResponseBO;
+import com.ioms.api.bo.CreateProductBO;
+import com.ioms.api.entity.Category;
+import com.ioms.api.entity.Inventory;
+import com.ioms.api.entity.Product;
 import com.ioms.api.enums.Status;
 
 @Service("productService")
@@ -28,7 +28,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepo;
 	
 	@Autowired
-    private CategoryRepository categoryRepo;
+    private com.ioms.api.repo.CategoryRepository categoryRepo;
 	
 	@Autowired
     private InventoryRepository inventoryRepo;

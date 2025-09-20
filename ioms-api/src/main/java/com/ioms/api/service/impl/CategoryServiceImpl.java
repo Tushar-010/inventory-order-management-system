@@ -1,7 +1,10 @@
-package com.ioms.api.category;
+package com.ioms.api.service.impl;
 
-import com.ioms.api.BOs.CommonResponseBO;
-import com.ioms.api.category.dto.CategoryBO;
+import com.ioms.api.bo.CategoryBO;
+import com.ioms.api.bo.CommonResponseBO;
+import com.ioms.api.entity.Category;
+import com.ioms.api.repo.CategoryRepository;
+import com.ioms.api.service.CategoryService;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,3 +29,4 @@ public class CategoryServiceImpl implements CategoryService {
         return bo;
     }
 }
+

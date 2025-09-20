@@ -1,6 +1,5 @@
-package com.ioms.api.product;
+package com.ioms.api.entity;
 
-import com.ioms.api.category.Category;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

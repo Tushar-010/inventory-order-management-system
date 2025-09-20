@@ -1,6 +1,5 @@
-package com.ioms.api.inventory;
+package com.ioms.api.entity;
 
-import com.ioms.api.product.Product;
 import jakarta.persistence.*;
 import lombok.*;
 

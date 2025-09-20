@@ -1,4 +1,4 @@
-package com.ioms.api.BOs;
+package com.ioms.api.bo;
 
 import java.util.List;
 

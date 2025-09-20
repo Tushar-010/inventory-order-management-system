@@ -5,10 +5,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import com.ioms.api.BOs.CommonResponseBO;
-import com.ioms.api.category.CategoryRepository;
-import com.ioms.api.category.CategoryService;
-import com.ioms.api.category.dto.CategoryBO;
+import com.ioms.api.bo.CategoryBO;
+import com.ioms.api.bo.CommonResponseBO;
+import com.ioms.api.service.CategoryService;
 
 import jakarta.validation.Valid;
 import java.net.URI;

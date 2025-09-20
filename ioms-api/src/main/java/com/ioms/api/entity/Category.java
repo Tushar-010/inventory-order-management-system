@@ -1,4 +1,4 @@
-package com.ioms.api.category;
+package com.ioms.api.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

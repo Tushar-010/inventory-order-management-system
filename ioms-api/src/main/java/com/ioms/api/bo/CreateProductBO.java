@@ -1,4 +1,4 @@
-package com.ioms.api.product.dto;
+package com.ioms.api.bo;
 
 import jakarta.validation.constraints.*;
 import lombok.Data;
