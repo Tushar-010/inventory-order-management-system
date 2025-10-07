@@ -9,10 +9,6 @@ import com.ioms.api.bo.CategoryBO;
 import com.ioms.api.bo.CommonResponseBO;
 import com.ioms.api.service.CategoryService;
 
-import jakarta.validation.Valid;
-import java.net.URI;
-import java.util.List;
-
 @Controller
 @RequestMapping("/categories")
 public class CategoryController {
@@ -25,5 +21,14 @@ public class CategoryController {
     public CommonResponseBO create(@RequestBody CategoryBO c) {
         return categoryService.create(c);
     }
+	
+	@PutMapping("/updateCategory")
+	public CommonResponseBO updateCategory(@RequestBody CategoryBO bo) {
+	    return categoryService.updateCategory(bo);
+	}
 
+	@DeleteMapping("/deleteCategory/{id}")
+	public CommonResponseBO deleteCategory(@PathVariable Long id) { 
+		return categoryService.deleteCategory(id);
+	}
 }

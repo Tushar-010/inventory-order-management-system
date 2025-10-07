@@ -26,6 +26,8 @@ public class Category {
     @Column(nullable=false,name="updated_at")
     private Date updatedAt;
     
+    @Column(name="status")
+    private String status;
     
     @PrePersist
     public void prePersist() {
@@ -77,4 +79,11 @@ public class Category {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
 }

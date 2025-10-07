@@ -1,43 +1,54 @@
 package com.ioms.api.bo;
 
-import jakarta.validation.constraints.*;
-
 import java.math.BigDecimal;
 
-public class CreateProductBO {
-	
-	private Long id;
+import com.ioms.api.entity.Product;
 
-	private String sku;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+public class ProductBO {
+    private Long id;
+    private String sku;
     private String name;
-    
-    private Long categoryId;
-
     private String unit;
-    
     private BigDecimal costPrice;
-    
     private BigDecimal sellPrice;
-    
     private Integer reorderLevel;
-    
     private Boolean isActive;
+    private Long categoryId;
+    private String categoryName;
     
-	public CreateProductBO() {
-	}
-
-	public CreateProductBO(String sku, String name, Long categoryId, String unit,BigDecimal costPrice,BigDecimal sellPrice,
-			Integer reorderLevel, Boolean isActive) {
+    public ProductBO() {}
+    
+	public ProductBO(Long id, String sku, String name, String unit, BigDecimal costPrice, BigDecimal sellPrice,
+			Integer reorderLevel, Boolean isActive, Long categoryId, String categoryName) {
 		super();
+		this.id = id;
 		this.sku = sku;
 		this.name = name;
-		this.categoryId = categoryId;
 		this.unit = unit;
 		this.costPrice = costPrice;
 		this.sellPrice = sellPrice;
 		this.reorderLevel = reorderLevel;
 		this.isActive = isActive;
+		this.categoryId = categoryId;
+		this.categoryName = categoryName;
+	}
+	
+	public ProductBO(Product product) {
+	    this.id = product.getId();
+	    this.sku = product.getSku();
+	    this.name = product.getName();
+	    this.unit = product.getUnit();
+	    this.costPrice = product.getCostPrice();
+	    this.sellPrice = product.getSellPrice();
+	    this.reorderLevel = product.getReorderLevel();
+	    this.isActive = product.getIsActive();
+	    this.categoryId = product.getCategory().getId();
+	    this.categoryName = product.getCategory().getName();
 	}
 
 	public Long getId() {
@@ -47,7 +58,7 @@ public class CreateProductBO {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public String getSku() {
 		return sku;
 	}
@@ -62,14 +73,6 @@ public class CreateProductBO {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Long getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
 	}
 
 	public String getUnit() {
@@ -111,7 +114,22 @@ public class CreateProductBO {
 	public void setIsActive(Boolean isActive) {
 		this.isActive = isActive;
 	}
-    
-	
+
+	public Long getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
     
 }
+
